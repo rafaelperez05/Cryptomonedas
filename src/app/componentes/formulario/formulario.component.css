@@ -1,0 +1,16 @@
+.heading  {
+ font-family: 'Raleway';
+ font-weight: 800;
+ font-size: 2rem;
+ text-transform: uppercase;
+ text-align: left;
+}
+
+.resul{
+font-size: 1rem;
+text-transform: capitalize; 
+}
+
+.precio {
+    font-size: 1.5rem;
+}

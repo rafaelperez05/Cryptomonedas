@@ -1,0 +1,59 @@
+
+    
+    <div class="heading mt-3">
+        
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <form >
+                    <div class="form-group">
+                        <label for="exampleSelect1" class="form-label mt-4">moneda </label>
+                        <select class="form-select" name="monedas" [(ngModel)]="optSelect" (ngModelChange)="capturar1()">
+                            <option value="0">Seleccionar</option>
+                            <option [value]="moneda.codigo" *ngFor="let moneda of monedas" >{{moneda.nombre}}</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleSelect1" class="form-label mt-4">crytomonedas </label>
+                        <select class="form-select" name="crytomonedas" [(ngModel)]="optSelectC" (ngModelChange)="capturar2()">
+                            <option value="0">Seleccionar</option>
+                            <option [value]="dato.CoinInfo.Name" *ngFor="let dato of arrData">{{dato.CoinInfo.FullName}}</option>
+                        </select>
+                      </div>
+                      <button class="btn btn-lg btn-secondary mt-1" type="submit" (click)="cotizar()">Cotizar </button>
+                </form>
+                <div class="resul mt-3">
+                    <p class="precio">{{resul.PRICE}}</p>
+                    <p>Precio mas alto del día: {{resul.HIGHDAY}}</p>
+                    <p>Precio mas bajo del día: {{resul.LOWDAY}}</p>
+                    <p>Variación ultimas 24 horas: {{resul.CHANGEPCT24HOUR}}</p>
+                    <p>Ultima actualización: {{resul.LASTUPDATE}}</p> 
+                  </div>
+              
+            </div>
+        </div>
+    </div>
+   
+
+<!-- <form >
+    <div class="form-group">
+        <select name="monedas" [(ngModel)]="optSelect" (ngModelChange)="capturar1()">
+        <option value="0">Seleccionar</option>
+        <option [value]="moneda.codigo" *ngFor="let moneda of monedas" >{{moneda.nombre}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select name="crytomonedas" [(ngModel)]="optSelectC" (ngModelChange)="capturar2()">
+        <option value="0">Seleccionar</option>
+        <option [value]="dato.CoinInfo.Name" *ngFor="let dato of arrData">{{dato.CoinInfo.FullName}}</option>
+        </select>
+    </div>
+    <button type="submit" (click)="cotizar()">Cotizar</button>
+    
+</form> -->
+
+
+    
+
+
+
+
