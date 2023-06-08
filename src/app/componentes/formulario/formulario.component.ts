@@ -14,8 +14,7 @@ export class FormularioComponent {
   optSelectC: string = '0';
   arrData: any = [];
   resultado: any = '';
-  resul: any = '';
-  
+    
   
   monedas = [
     { codigo: 'USD', nombre: 'Dolar de Estados Unidos' },
@@ -44,19 +43,19 @@ capturar1(){
 
 capturar2(){
   console.log(this.optSelectC);
-  this.captura.obtenerDato2(this.optSelect, this.optSelectC).subscribe(
-    (datos:any) => {
-
-      this.resultado = datos.DISPLAY[this.optSelectC][this.optSelect];
-
-      console.log(datos.DISPLAY[this.optSelectC][this.optSelect]);
-    }
-  )
-
+  
   }
 
   cotizar(){
-    this.resul = this.resultado;
+    this.captura.obtenerDato2(this.optSelect, this.optSelectC).subscribe(
+      (datos:any) => {
+  
+        this.resultado = datos.DISPLAY[this.optSelectC][this.optSelect];
+  
+        console.log(datos.DISPLAY[this.optSelectC][this.optSelect]);
+      }
+    )
+      
   }
   
 }
